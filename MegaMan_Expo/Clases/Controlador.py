@@ -59,11 +59,12 @@ class Controlador(object):
 
     @classmethod
     def Spawnear_Enemigo(cls):
-        E1 = Enemigo(300, 375, 90, 90, "Imagenes/Enemigo.png")
+        E1 = Enemigo(600, 350, 110, 110, "Imagenes/Enemigo.png")
 
     @classmethod
-    def Mover_Enemigo(cls, Enemigo):
-        Enemigo.rect.x -= 15
+    def Mover_Enemigo(cls, Grupo):
+        for E in Grupo:
+            E.rect.x -= 6
 
     @classmethod
     def buscar_teclas(cls):

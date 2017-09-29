@@ -18,8 +18,11 @@ def Acciones(reloj, MegaMan, FPS, frames_totales, segundos):
     if teclas[pygame.K_w] or teclas[pygame.K_UP] and MegaMan.salto is False:
         MegaMan.activar_salto()
 
-    if segundos == 30:
+    if segundos == 5:
         Controlador.Spawnear_Enemigo()
+
+    if segundos > 5:
+        Controlador.Mover_Enemigo(Base.Enemigos)
 
     Controlador.salto_MegaMan(MegaMan)
     Controlador.colisiones(MegaMan)
