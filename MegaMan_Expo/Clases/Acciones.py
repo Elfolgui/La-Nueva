@@ -2,7 +2,7 @@ from .Controlador import *
 from .Base import Base
 import pygame
 
-def Acciones(reloj, MegaMan, FPS, frames_totales):
+def Acciones(reloj, MegaMan, FPS, frames_totales, segundos):
 
     Controlador.set_fps(reloj, FPS)
     Controlador.buscar_eventos(MegaMan)
@@ -17,6 +17,9 @@ def Acciones(reloj, MegaMan, FPS, frames_totales):
 
     if teclas[pygame.K_w] or teclas[pygame.K_UP] and MegaMan.salto is False:
         MegaMan.activar_salto()
+
+    if segundos == 30:
+        Controlador.Spawnear_Enemigo()
 
     Controlador.salto_MegaMan(MegaMan)
     Controlador.colisiones(MegaMan)

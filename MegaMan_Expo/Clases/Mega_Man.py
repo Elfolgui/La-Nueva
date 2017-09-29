@@ -1,6 +1,5 @@
 import pygame
 from .Base import Base
-from .Bala import Bala
 from .Controlador import Controlador
 
 class Mega_Man(Base):

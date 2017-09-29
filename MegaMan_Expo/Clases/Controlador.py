@@ -1,6 +1,7 @@
 import pygame.locals
 from .Base import *
 from .Bala import Bala
+from .Enemigos import Enemigo
 
 
 class Controlador(object):
@@ -55,6 +56,14 @@ class Controlador(object):
             if evento.type == pygame.KEYDOWN and evento.key == pygame.K_SPACE and MegaMan.salto:
                 print("Dispare!")
                 MegaMan.Disparar_Saltando()
+
+    @classmethod
+    def Spawnear_Enemigo(cls):
+        E1 = Enemigo(300, 375, 90, 90, "Imagenes/Enemigo.png")
+
+    @classmethod
+    def Mover_Enemigo(cls, Enemigo):
+        Enemigo.rect.x -= 15
 
     @classmethod
     def buscar_teclas(cls):

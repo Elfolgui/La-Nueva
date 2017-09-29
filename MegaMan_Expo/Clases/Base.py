@@ -6,6 +6,7 @@ class Base(pygame.sprite.Sprite):
 
     sprites = Sprites()
     Balas = Sprites()
+    Enemigos = Sprites()
     piso = Sprites()
     bloques = Sprites()
 
